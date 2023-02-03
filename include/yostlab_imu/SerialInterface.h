@@ -14,12 +14,12 @@ private:
     using SerialPtr = std::unique_ptr<serial::Serial>;
 
 public:
-  
+
   SerialInterface(ros::NodeHandle& serial_nh_):
     log_zone_("[ SerialInterface ] ")
   {
     serial_nh_.param<int>("BAUD_RATE",baud_,115200);
-    serial_nh_.param<std::string>("SERIAL_PORT",port_,"/dev/ttyACM0");
+    serial_nh_.param<std::string>("SERIAL_PORT",port_,"/dev/yost_imu");
   }
 
   const int& getBaudRate() { return baud_; }
