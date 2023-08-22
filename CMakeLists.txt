@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(yostlab_imu)
 
-add_compile_options(-std=c++11)
+add_compile_options(-std=c++17)
 
 
 find_package(catkin REQUIRED COMPONENTS
@@ -21,7 +21,7 @@ catkin_package(
 )
 
 include_directories(
-  INCLUDE_DIRS include 
+  INCLUDE_DIRS include
   ${BOOST_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
